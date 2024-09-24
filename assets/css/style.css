@@ -1,0 +1,72 @@
+body {
+  overflow: hidden;;
+}
+
+/* プレースホルダの option を非表示にする */
+/* select {
+  color: gray;
+}
+select option:first-child {
+  display: none;
+}
+.wpcf7-select option:not(:first-child) {
+  color: #48e250;
+} */
+
+
+.custom-select {
+  position: relative;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  color: gray;
+}
+
+.custom-select .selected {
+  display: block;
+}
+
+.custom-select .arrow {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%) rotate(45deg);
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  padding: 3px;
+}
+
+.custom-select .options {
+  color: #48e250;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #ccc;
+  display: none;
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.custom-select .options.open {
+  display: block;
+}
+
+.custom-select .option {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 5px dotted #ccc;
+}
+
+.custom-select .option:hover {
+  background-color: #f0f0f0;
+}
+
+.custom-select .option:last-child {
+  border-bottom: none;
+}
